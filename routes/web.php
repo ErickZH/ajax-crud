@@ -16,4 +16,8 @@ Route::get('/', function () {
 });
 
 // Rutas CRUD ajax
-Route::get('crud/','');
+Route::get('crud', 'PersonController@index');
+Route::post('crud', 'PersonController@add');
+Route::get('crud/view', 'PersonController@view');
+Route::post('crud/update', 'PersonController@update');
+Route::post('crud/delete', 'PersonController@delete');
