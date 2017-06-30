@@ -68,7 +68,7 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label for="nombre">Nombre:</label>
-                                        <input type="text" class="form-control" id="nombre" name="nombre">
+                                        <input type="text" class="form-control" id="nombre" name="nombre" autofocus>
                                     </div>
                                     <div class="form-group">
                                         <label for="edad">Edad:</label>
@@ -125,7 +125,7 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label for="edit_nombre">Nombre:</label>
-                                        <input type="text" class="form-control" id="edit_nombre" name="edit_nombre">
+                                        <input type="text" class="form-control" id="edit_nombre" name="edit_nombre" autofocus>
                                     </div>
                                     <div class="form-group">
                                         <label for="edit_edad">Edad:</label>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+// Utilizamos el modelo Person
 use App\Person;
 
 class PersonController extends Controller
