@@ -1,3 +1,7 @@
+<!-- Erick Zarate Hernández-->
+<!-- Crud con Ajax en Laravel-->
+<!-- sigueme en -->
+<!-- Twitter @ezarateh-->
 <!DOCTYPE html>
 <html>
     <head>
