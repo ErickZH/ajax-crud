@@ -100,42 +100,44 @@
                             <p><b>Email:</b><span id="view_email" class="text-success"></span></p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal"></button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
-
             <!-- Modal para editar a una persona -->
             <div class="modal fade" id="editModal" role="dialog">
                 <div class="modal-dialog">
-                    <!-- contenido del modal-->
+
+                    <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Editar</h4>
+                            <h4 class="modal-title">Edit</h4>
                         </div>
-                    </div>
-                    <div class="modal-body">
-                        <form action="{{ url('crud/update')}}" method="post">
-                            {{ csrf_field() }}
-                            <div class="form-group">
+                        <div class="modal-body">
+                            <form action="{{ url('crud/update') }}" method="post">
+                                {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label for="edit_nombre">Nombre:</label>
-                                    <input type="text" class="form-control" id="edit_nombre" name="edit_nombre">
+                                    <div class="form-group">
+                                        <label for="edit_nombre">Nombre:</label>
+                                        <input type="text" class="form-control" id="edit_nombre" name="edit_nombre">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="edit_edad">Edad:</label>
+                                        <input type="text" class="form-control" id="edit_edad" name="edit_edad">
+                                    </div>
+                                    <label for="edit_email">Email:</label>
+                                    <input type="email" class="form-control" id="edit_email" name="edit_email">
                                 </div>
-                                <div class="form-group">
-                                    <label for="edit_edad">Edad:</label>
-                                    <input type="text" class="form-control" id="edit_ead" name="edit_edad">
-                                </div>
-                            </div>
 
-                            <label for="edit_email">Email:</label>
-                            <input type="email" class="form-control" id="edit_email" name="edit_email">
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-default">Actualizar</button>
+                                <input type="hidden" id="edit_id" name="edit_id">
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -151,10 +153,9 @@
                         data: {"id":id},
                         success: function(result)
                         {
-                            $("#edit_id").val(result.id);
-                            $("#edit_nombre").val(result.nombre);
-                            $("#edit_edad").val(result.edad);
-                            $("#edit_email").val(result.eamil);
+                            $("#view_nombre").text(result.nombre);
+                            $("#view_edad").text(result.edad);
+                            $("#view_email").text(result.email);
                         }
                     });
                 }
