@@ -16,7 +16,7 @@ class PersonController extends Controller
     }
 
     // Agrega a una persona
-    public function add(Request $resquest)
+    public function add(Request $request)
     {
         $data = new Person;
 
